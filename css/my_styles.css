@@ -72,6 +72,32 @@ body{
         "footer footer footer" 
     }
 } 
- 
+/* estilos de contacto  */
+.form_contacto{
+    margin: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.complete_nombre{
+    display: none;
+    color: brown;
+}
+.complete_email{
+    display: none;
+    color: brown;
+}
+.complete_consulta{
+    display: none;
+    color: brown;
+}
+.consulta_enviada{
+    display: none;
+    color: rgb(85, 151, 10);
+}
+.form_contacto_text_area{
+    margin-bottom: 10px;
+    height: 200px;
+}
 
 

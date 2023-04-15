@@ -10,9 +10,11 @@
     <!-- fuentes de letras: -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700&family=Poppins:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700&family=Poppins:ital,wght@0,300;1,300&display=swap" rel="stylesheet"> 
+    <script src="scripts_js/send_mail.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
-<body class="grid-container" onload="initMap()">
+<body class="grid-container">
     <header class="header">
         <div class="logo">
             <img src="img/film-reel.png" alt="MaxCinema Logo" width="70" height="70"><h1>MaxCinema</h1>
@@ -26,9 +28,19 @@
     </nav>
     <article class="article">
         <h3>Contactenos</h2>
+        <p>Complete el formulario y nos comunicaremos de inmediato</p>
+        <form class="form_contacto" method="post" name="form_contacto">
+            <h5>Ingrese su nombre:</h5><input type="text" name="nombre" value="">
+            <small class="small complete_nombre" id="complete_nombre">¡Complete el nombre!</small>
+            <h5>Ingrese su email:</h5><input type="email" name="email" value="">
+            <small class="small complete_email" id="complete_email">Ingrese un email válido</small>
+            <h5>Ingrese su consulta:</h5><textarea class="form_contacto_text_area" id="comentario" form="form_contacto"></textarea>
+            <small class="small complete_consulta" id="complete_consulta">Complete la consulta que desea realizar</small>
+            <input type="button" value="Send Mail"onclick="sendEmail()" />
+            <small class="small consulta_enviada" id="consulta_enviada">Su consulta fue enviada y le responderemos a la brevedad. Gracias.</small>
+        </form>        
     </article>
     <aside class="aside">
-        <h3>form de contacto</h3>
     </aside>
     <footer class="footer">
         <h4>CopyRight©2023 para codo a codo</h4>
