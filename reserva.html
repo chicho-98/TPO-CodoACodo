@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700&family=Poppins:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 </head>
-<body class="grid-container" onload="initMap()">
+<body class="grid-container noaside">
     <header class="header">
         <div class="logo">
             <img src="img/film-reel.png" alt="MaxCinema Logo" width="70" height="70"><h1>MaxCinema</h1>
@@ -24,12 +24,62 @@
         <a href="reserva.html">Reserva</a>
         <a href="contacto.html">Contacto</a>
     </nav>
-    <article class="article">
-        <h3>Reserva de entradas</h2>
+    <article class="article art_form_reserva">
+        <h3 class="centrado_horizonal">Reserve sú entrada</h3>
+        <form class="form_reserva" method="post" name="form_reserva">
+            <fieldset>
+                <legend>cine</legend>
+                <input class="radio_sel_cine" type="radio" name="radio_cine" value="crespo" checked><label for="crespo">Villa Crespo</label><br>
+                <input class="radio_sel_cine" type="radio" name="radio_cine" value="once"><label for="once">Once (Balvanera)</label><br>
+                <input class="radio_sel_cine" type="radio" name="radio_cine" value="barrio_norte"><label for="barrio_norte">Barrio Norte</label>
+            </fieldset>
+            <fieldset  class="fieldset_pelicula">
+                <legend>película</legend>
+                <h5>Película:</h5>
+                <select id="nombre_pelicula" class="list_pelicula">
+                    <option value="volver2">Volver al Futuro 2</option>
+                    <option value="otra2">otra2</option>
+                    <option value="otra3">otra3</option>
+                    <option value="otra4">otra4</option>
+                </select>            
+                <h5>Dia:</h5>
+                <select id="dia_pelicula">
+                    <option value="lunes">Lunes</option>
+                    <option value="martes">Martes</option>
+                    <option value="miercoles">Miercoles</option>
+                    <option value="jueves">Jueves</option>
+                    <option value="viernes">Viernes</option>
+                    <option value="sabado">Sábado</option>
+                    <option value="domingo">Domingo</option>
+                </select>            
+                <h5 class="hora_pelicula">Hora:</h5>
+                <select id="hora_sel_pelicula">
+                    <option value="10">10:00hs</option>
+                    <option value="15">15:00hs</option>
+                    <option value="18">18:00hs</option>
+                    <option value="20">20:00hs</option>
+                    <option value="23">23:00hs</option>
+                </select>            
+                <h5>Entradas:</h5>
+                <input type="number" id="cantidad_entradas" value="1" min="1" max="10">
+                <strong class="total_pelicula">Total: $1500</strong>
+            </fieldset>    
+            <fieldset class="fieldset_factura">
+                <legend>datos de facturación</legend>
+                <h5>Número de tarjeta:</h5>
+                <h5>Vencimiento (mm/aa)</h5>
+                <h5>CVC</h5>
+                <input id="numero_tarjeta_credito" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                <input id="vto_tarjeta_credito" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="4" placeholder="xx/xx">
+                <input id="vto_tarjeta_credito" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="4" placeholder="xxx">
+                <h5 class="ocupar_todo_el_ancho">Ingrese su nombre como figura en la tarjeta:</h5>
+                <input class="ocupar_todo_el_ancho" type="text" name="nombre" value="">
+                <h5 class="ocupar_todo_el_ancho">Ingrese su email:</h5>
+                <input class="ocupar_dos_columnas" type="email" name="email" value="">
+            </fieldset>  
+            <div class="centrado_horizonal"><input type="submit"  value=" Reservar "></div>  
+    </form>        
     </article>
-    <aside class="aside">
-        <h3>form de reserva</h3>
-    </aside>
     <footer class="footer">
         <h4>CopyRight©2023 para codo a codo</h4>
     </footer>
