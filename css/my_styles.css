@@ -11,16 +11,35 @@ html{
 body{
     min-height: 100%;
 }
+.h1{
+    color: aliceblue;
+}
 .mapa{
     display: flex;
 }
-.logo{
-    display: flex;
-    flex-direction: row;
-} 
-
 .header{
     grid-area: header;
+    background-color: #353839;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+.header .nav-links{
+    list-style: none;
+}
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.header .nav-links a{
+    color: azure;
+    text-decoration: none;
+}
+.logo{
+    display: flex;
+    align-items: center;
 }
 .navbar{
     grid-area: navbar;
