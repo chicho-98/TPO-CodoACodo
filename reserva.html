@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700&family=Poppins:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <script src="scripts_js/val_reserva.js"></script>
 </head>
 <body class="grid-container noaside">
     <header class="header">
@@ -29,7 +30,7 @@
         <img src="img/usuario.png" alt="usuario" width="50" height="50">
     </header>
     
-    <article class="article art_form_reserva">
+    <article class="article art_form_reserva centrado">
         <h3 class="centrado_horizonal">Reserve sú entrada</h3>
         <form class="form_reserva" method="post" name="form_reserva">
             <fieldset>
@@ -66,8 +67,8 @@
                     <option value="23">23:00hs</option>
                 </select>            
                 <h5>Entradas:</h5>
-                <input type="number" id="cantidad_entradas" value="1" min="1" max="10">
-                <strong class="total_pelicula">Total: $1500</strong>
+                <input type="number" id="cantidad_entradas" value="1" min="1" max="10" onchange="changeCantEntradas()">
+                <label class="total_pelicula" id="total_pelicula">Total: $1500</label>
             </fieldset>    
             <fieldset class="fieldset_factura">
                 <legend>datos de facturación</legend>
