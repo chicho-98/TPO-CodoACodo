@@ -30,18 +30,17 @@
         </nav>
         <img src="img/usuario.png" alt="usuario" width="50" height="50">
     </header>
-    
-    <article class="article">
-        <h3>Contactenos</h2>
+    <article class="article centrado">
+        <h3>Contactenos</h3>
         <p>Complete el formulario y nos comunicaremos de inmediato</p>
-        <form class="form_contacto" method="post" name="form_contacto">
+        <form class="form_contacto" method="post" name="form_contacto centrado-items">
             <h5>Ingrese su nombre:</h5><input type="text" name="nombre" value="">
             <small class="small complete_nombre" id="complete_nombre">¡Complete el nombre!</small>
             <h5>Ingrese su email:</h5><input type="email" name="email" value="">
             <small class="small complete_email" id="complete_email">Ingrese un email válido</small>
             <h5>Ingrese su consulta:</h5><textarea class="form_contacto_text_area" id="comentario" form="form_contacto"></textarea>
             <small class="small complete_consulta" id="complete_consulta">Complete la consulta que desea realizar</small>
-            <input type="button" value="Send Mail"onclick="sendEmail()" />
+            <input type="button" value="Enviar Consulta"onclick="sendEmail()" />
             <small class="small consulta_enviada" id="consulta_enviada">Su consulta fue enviada y le responderemos a la brevedad. Gracias.</small>
         </form>        
     </article>

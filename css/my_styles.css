@@ -41,9 +41,6 @@ body{
     display: flex;
     align-items: center;
 }
-.navbar{
-    grid-area: navbar;
-}
 .aside{
     grid-area: aside;
 }
@@ -53,8 +50,6 @@ body{
 .footer{
     grid-area:footer;
 }
-
-
 .grid-container{
     display: grid;
     gap:10px;
@@ -63,7 +58,7 @@ body{
     grid-template-rows:100px 25px auto auto 50px;
     grid-template-areas: 
     "header"  
-    "navbar" 
+    "article"
     "article"
     "aside" 
     "footer";
@@ -71,26 +66,30 @@ body{
 .noaside{
     grid-template-areas: 
     "header"  
-    "navbar" 
+    "article"
     "article"
     "footer";
 }
-
+.centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+}
 @media(min-width:600px){
     .grid-container{
         grid-template-columns: 100px auto;
         grid-template-rows:100px auto auto 50px;
         grid-template-areas: 
         "header header" 
-        "navbar article" 
-        "navbar aside"
+        "article article" 
+        "aside aside"
         "footer footer";
     }
     .noaside{
         grid-template-areas: 
         "header header" 
-        "navbar article" 
-        "navbar article"
+        "article article" 
+        "article article"
         "footer footer";
     }
 }
@@ -101,7 +100,7 @@ body{
         grid-template-rows:100px auto 50px; 
         grid-template-areas:
         "header header header" 
-        "navbar article aside" 
+        "article article aside" 
         "footer footer footer" 
     }
     .noaside{
@@ -109,7 +108,7 @@ body{
         grid-template-rows:100px auto 50px; 
         grid-template-areas:
         "header header header" 
-        "navbar article article" 
+        "article article article" 
         "footer footer footer" 
     }
 } 
@@ -119,6 +118,7 @@ body{
     text-align: left;
     display: flex;
     flex-direction: column;
+    min-width: 600px; 
 }
 .complete_nombre{
     display: none;
@@ -140,7 +140,6 @@ body{
     margin-bottom: 10px;
     height: 200px;
 }
-
 /* estilos de reserva */
 .art_form_reserva{
     text-align: left;
@@ -163,6 +162,7 @@ body{
 .total_pelicula{
     text-align: center;
     grid-column: 3/-1;
+    font-weight: bold;;
 }
 .hora_pelicula{
     padding-left: 10px;
