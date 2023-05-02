@@ -23,7 +23,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 85px;
+    min-height: 85px;
     padding: 5px 10%;
 }
 .header .nav-links{
@@ -36,6 +36,11 @@ body{
 .header .nav-links a{
     color: azure;
     text-decoration: none;
+    font-weight: 600;
+    transition-duration: 0.5s;
+}
+.header .nav-links a:hover{
+    color: darkkhaki;
 }
 .logo{
     display: flex;
@@ -240,7 +245,7 @@ legend{
     margin-bottom: 40px;
     text-align: left;
 }
-.button-container{
+.movie-button-container{
     display: flex;
     justify-content: flex-start;
 }
@@ -256,4 +261,11 @@ legend{
     padding: 0 35px;
     font-weight: 600;
     text-decoration: none;
+    transition-duration: 0.5s;
+}
+.movie-button:hover{
+    background: navy;
+}
+.movie-trailer{
+    margin-top: 8%;
 }
