@@ -11,8 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700&family=Poppins:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDm11QeQH2Kxcr4NxhNi_QBNUpIOlQO4Cc&callback=initMap" async defer></script>
-    <script src='scripts_js/mapa.js'></script> 
 </head>
 <body class="grid-container" onload="initMap()">
     <header class="header">
@@ -32,14 +30,57 @@
     </header>
     
     <article class="article">
-        <img src="img/Barco-Escape.jpg" alt="cine imersivo" width="50%">
-        <p>
-            "MaxCinema" es un innovador cine virtual que ofrece experiencias cinematográficas inmersivas en línea. Dirigido por Max, un visionario tecnológico, el cine utiliza la realidad virtual y la inteligencia artificial para crear proyecciones personalizadas basadas en las preferencias de los espectadores. Con su avanzada tecnología, los espectadores pueden sumergirse en mundos virtuales asombrosos y disfrutar de películas en formatos 3D, 4D y 360 grados
-        </p>
+        <div class="movie-box">
+            <div class="movie-box-info">
+                <figure>
+                    <img src="img/peliculas/la-extorsion-image-1681157870.jpg" alt="La_Extorsión">
+                </figure>
+                <ul>
+                    <li>
+                        <strong>Género:</strong>
+                        Suspenso
+                    </li>
+                    <li>
+                        <strong>Duración:</strong>
+                        105 minutos
+                    </li>
+                    <li>
+                        <strong>Actores:</strong>
+                        Guillermo Francella, Pablo Rago, Andrea Frigerio, Guillermo Arengo, Carlos Portaluppi, Alberto Ajaka
+                    </li>
+                    <li>
+                        <strong>Director:</strong>
+                        Martino Zaidelis
+                    </li>
+                    <li>
+                        <strong>Calificación:</strong>
+                        +13
+                    </li>
+                    <li>
+                        <strong>Distribuidora:</strong>
+                        Warner Bros
+                    </li>
+                </ul>
+            </div>
+        </div>   
     </article>
+
     <aside class="aside">
-        <h3>Nuestros Cines</h3>
-        <div id="mapa" style="height: 300px; width: 100%;"></div>
+        <h2 class="movie-name">La Extorsión</h2>
+        <p class="movie-description">
+            Un piloto de aviones con base de operaciones en Ezeiza comienza a ser extorsionado por el servicio secreto para
+            contrabandear una valija hacia España.
+        </p>
+        <div class="movie-button-container">
+            <a href="reserva.html" class="movie-button">ENTRADAS</a>
+        </div>
+        <div class="movie-trailer">
+            <iframe width=100% height="315" src="https://www.youtube.com/embed/skrWzmy58uY" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
     </aside>
 
     <footer class="footer">
