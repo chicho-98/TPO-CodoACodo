@@ -14,7 +14,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDm11QeQH2Kxcr4NxhNi_QBNUpIOlQO4Cc&callback=initMap" async defer></script>
     <script src='scripts_js/mapa.js'></script> 
 </head>
-<body class="grid-container" onload="initMap()">
+<body class="noaside" onload="initMap()">
     <header class="header">
         <div class="logo">
             <img src="img/film-reel.png" alt="MaxCinema Logo" width="70" height="70">
@@ -32,15 +32,30 @@
     </header>
     
     <article class="article">
-        <img src="img/Barco-Escape.jpg" alt="cine imersivo" width="50%">
+        <div class="slider">
+            <ul>
+                <li>
+                    <img src="img/carrousel/Barco-Escape.jpg" alt="cine imersivo">
+                </li>
+                <li>
+                    <img src="img/carrousel/promo1.png" alt="promo1">
+                </li>
+                <li>
+                    <img src="img/carrousel/promo2.png" alt="promo2">
+                </li>
+                <li>
+                    <img src="img/carrousel/promo_star_wars.png" alt="promo2">
+                </li>
+            </ul>
+        </div>
         <p>
             "MaxCinema" es un innovador cine virtual que ofrece experiencias cinematográficas inmersivas en línea. Dirigido por Max, un visionario tecnológico, el cine utiliza la realidad virtual y la inteligencia artificial para crear proyecciones personalizadas basadas en las preferencias de los espectadores. Con su avanzada tecnología, los espectadores pueden sumergirse en mundos virtuales asombrosos y disfrutar de películas en formatos 3D, 4D y 360 grados
         </p>
     </article>
-    <aside class="aside">
+    <article class="article">
         <h3>Nuestros Cines</h3>
         <div id="mapa" style="height: 300px; width: 100%;"></div>
-    </aside>
+    </article>
 
     <footer class="footer">
         <ul>
