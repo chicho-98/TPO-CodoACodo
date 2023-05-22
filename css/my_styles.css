@@ -46,6 +46,10 @@ body{
     display: flex;
     align-items: center;
 }
+.ul{
+    padding-left: 15px;
+    margin-left: 15px;
+}
 .aside{
     grid-area: aside;
     padding-right: 15px;
@@ -53,6 +57,7 @@ body{
 .article{
     grid-area: article;
     padding-left: 15px;
+    text-align: left;
 }
 .footer{
     grid-area:footer;

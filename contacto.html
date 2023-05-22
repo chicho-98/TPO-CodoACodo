@@ -13,8 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700&family=Poppins:ital,wght@0,300;1,300&display=swap" rel="stylesheet"> 
     <script src="scripts_js/send_mail.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDm11QeQH2Kxcr4NxhNi_QBNUpIOlQO4Cc&callback=initMap" async defer></script>
+    <script src='scripts_js/mapa.js'></script>
 </head>
-<body class="grid-container noaside">
+<body class="grid-container" onload="initMap()">
     <header class="header">
         <div class="logo">
             <img src="img/film-reel.png" alt="MaxCinema Logo" width="70" height="70">
@@ -30,7 +32,18 @@
         </nav>
         <img src="img/usuario.png" alt="usuario" width="50" height="50">
     </header>
-    <article class="article centrado">
+
+    <article class="article">
+        <h3>Nuestros Cines</h3>
+        <ul class="ul">
+            <li>Barrio Norte</li>
+            <li>Once (Balvanera)</li>
+            <li>Villa Crespo</li>
+        </ul>
+        <div id="mapa" style="height: 300px; width: 100%;"></div>
+    </article>
+
+    <aside class="aside">
         <h3>Contactenos</h3>
         <p>Complete el formulario y nos comunicaremos de inmediato</p>
         <form class="form_contacto" method="post" name="form_contacto centrado-items">
@@ -43,7 +56,7 @@
             <input type="button" value="Enviar Consulta"onclick="sendEmail()" />
             <small class="small consulta_enviada" id="consulta_enviada">Su consulta fue enviada y le responderemos a la brevedad. Gracias.</small>
         </form>        
-    </article>
+    </aside>
 
     <footer class="footer">
         <ul>
