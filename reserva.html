@@ -32,7 +32,7 @@
     
     <article class="article art_form_reserva centrado">
         <h3 class="centrado_horizonal">Reserve sú entrada</h3>
-        <form class="form_reserva" method="post" name="form_reserva">
+        <form class="form_reserva" method="post" onsubmit="return sendSubmit()" name="form_reserva">
             <fieldset>
                 <legend>cine</legend>
                 <input class="radio_sel_cine" type="radio" name="radio_cine" value="crespo" checked><label for="crespo">Villa Crespo</label><br>
@@ -44,9 +44,13 @@
                 <h5>Película:</h5>
                 <select id="nombre_pelicula" class="list_pelicula">
                     <option value="volver2">Volver al Futuro 2</option>
-                    <option value="otra2">otra2</option>
-                    <option value="otra3">otra3</option>
-                    <option value="otra4">otra4</option>
+                    <option value="exor">El exorsista del papa</option>
+                    <option value="fast">Fast X</option>
+                    <option value="guard3">Guardianes de la galaxia 3</option>
+                    <option value="wick4">John Wick 4</option>
+                    <option value="extor">La extorsión</option>
+                    <option value="cab">Caballeros de Zodiaco</option>
+                    <option value="sbros">Super Mario Bros</option>
                 </select>            
                 <h5>Dia:</h5>
                 <select id="dia_pelicula">
@@ -75,16 +79,16 @@
                 <h5>Número de tarjeta:</h5>
                 <h5>Vencimiento (mm/aa)</h5>
                 <h5>CVC</h5>
-                <input id="numero_tarjeta_credito" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
-                <input id="vto_tarjeta_credito" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="4" placeholder="xx/xx">
-                <input id="vto_tarjeta_credito" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="4" placeholder="xxx">
+                <input id="numero_tarjeta_credito" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required="true">
+                <input id="vto_tarjeta_credito" type="tel" inputmode="numeric" pattern="[0-9/\s]{5}" autocomplete="cc-number" maxlength="5" placeholder="xx/xx" required="true">
+                <input id="cvc_tarjeta_credito" type="tel" inputmode="numeric" pattern="[0-9\s]{3}" autocomplete="cc-number" maxlength="3" placeholder="xxx" required="true">
                 <h5 class="ocupar_todo_el_ancho">Ingrese su nombre como figura en la tarjeta:</h5>
-                <input class="ocupar_todo_el_ancho" type="text" name="nombre" value="">
+                <input class="ocupar_todo_el_ancho" type="text" name="nombre" pattern="[A-Za-z\s]+" value="" required="true">
                 <h5 class="ocupar_todo_el_ancho">Ingrese su email:</h5>
-                <input class="ocupar_dos_columnas" type="email" name="email" value="">
+                <input class="ocupar_dos_columnas" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="" required="true">
             </fieldset>  
-            <div class="centrado_horizonal"><input type="submit"  value=" Reservar "></div>  
-    </form>        
+            <div class="centrado_horizonal"><input type="submit" value=" Reservar "></div>  
+        </form>        
     </article>
 
     <footer class="footer">
