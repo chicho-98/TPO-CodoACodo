@@ -16,13 +16,25 @@ function getMovie(id) {
         elements[7].innerHTML = `<strong>Director:</strong>
         ${data.Director}`;
 
-        let movieNames = document.getElementsByClassName('movie-name');
-        movieNames[0].textContent = `${data.Title}`;
+        translateText(data.Title, "en", "es", (error, translatedText) => {
+            if (error) {
+              let descriptions = document.getElementsByClassName('movie-description');
+              descriptions[0].textContent = `${data.Plot}`;
+            } else {
+               let movieNames = document.getElementsByClassName('movie-name');
+               movieNames[0].textContent = `${translatedText}`;
+            }
+         });        
 
-        let descriptions = document.getElementsByClassName('movie-description');
-        descriptions[0].textContent = `${data.Plot}`;
+        translateText(data.Plot, "en", "es", (error, translatedText) => {
+          if (error) {
+            let descriptions = document.getElementsByClassName('movie-description');
+            descriptions[0].textContent = `${data.Plot}`;
+            } else {
+                let descriptions = document.getElementsByClassName('movie-description');
+                descriptions[0].textContent = `${translatedText}`;
+            }
+        });        
 
-        console.log(data)
     })
-    
 }
