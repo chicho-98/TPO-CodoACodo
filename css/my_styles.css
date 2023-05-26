@@ -10,9 +10,19 @@ html{
 }
 body{
     min-height: 100%;
+    background-image: url('../img/pexels-adrien-olichon-2387793.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 .h1{
     color: aliceblue;
+}
+.h3{
+    color: azure;
+}
+h4{
+    color: azure;
 }
 .mapa{
     display: flex;
@@ -53,11 +63,13 @@ body{
 .aside{
     grid-area: aside;
     padding-right: 15px;
+    color: azure;
 }
 .article{
     grid-area: article;
     padding-left: 15px;
     text-align: left;
+    color: azure;
 }
 .footer{
     grid-area:footer;
@@ -175,6 +187,7 @@ body{
 /* estilos de reserva */
 .art_form_reserva{
     text-align: left;
+    color: azure;
 }
 .centrado_horizonal {
     text-align: center;
@@ -230,6 +243,7 @@ legend{
     flex-wrap: wrap;
     padding: 30px;
     border: 1px solid #eee;
+    background-color: #191919;
 }
 .movie-box-info figure{
     width: 100%;
@@ -253,6 +267,7 @@ legend{
     padding: 0;
     list-style: none;
     font-size: 15px;
+    color: azure;
 }
 .movie-box-info ul li strong{
     width: 150px;
@@ -265,12 +280,14 @@ legend{
     font-size: 3.75em;
     font-weight: 600;
     text-align: left;
+    color: azure;
 }
 .movie-description{
     width: 100%;
     font-size: 1em;
     margin-bottom: 40px;
     text-align: left;
+    color: azure;
 }
 .movie-button-container{
     display: flex;
@@ -303,6 +320,7 @@ legend{
 }
 .billboard-title{
     font-size: 3em;
+    color: azure;
 }
 .billboard-movies{
     display: grid;
@@ -313,6 +331,9 @@ legend{
 .billboard-movie img{
     width: 95%;
     height: 80%;
+}
+.billboard-movie img:hover{
+    opacity: 0.7;
 }
 /* estilos de carrousel */
 .slider{
