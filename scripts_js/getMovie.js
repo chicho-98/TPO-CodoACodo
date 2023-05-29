@@ -1,5 +1,5 @@
 function getMovie(id) {
-    fetch('http://www.omdbapi.com/?i=' + id + '&apikey=548e898d')
+    fetch('https://www.omdbapi.com/?i=' + id + '&apikey=548e898d')
     .then(response => response.json())
     .then(data => {
 
