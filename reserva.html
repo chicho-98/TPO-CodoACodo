@@ -51,10 +51,10 @@
                     <option value="John Wick 4">John Wick 4</option>
                     <option value="La Extorsion">La Extorsión</option>
                     <option value="Los Caballeros del Zodiaco">Los Caballeros del Zodíaco</option>
-                    <option value="El Hombre Araña">El Hombre Araña</option>
+                    <option value="Spiderman">El Hombre Araña</option>
                     <option value="Super Mario Bros.">Super Mario Bros.</option>
                     <option value="Casablanca">Casablanca</option>
-                    <option value="La Naranja Mecánica">La Naranja Mecánica</option>
+                    <option value="La Naranja Mecanica">La Naranja Mecánica</option>
                     <option value="El Padrino">El Padrino</option>
                     <option value="Star Wars Episodio V - El Imperio contraataca">Star Wars Episodio V - El Imperio contraataca</option>
                     <option value="Volver al Futuro">Volver al Futuro</option>
@@ -105,7 +105,7 @@
     <script>
         const form = document.querySelector(".form_reserva");
         form.addEventListener("submit", function(e) {
-            e.preventDefault();
+            //e.preventDefault();
 
             const formData = new FormData(form);
             const data = Object.fromEntries(formData);
