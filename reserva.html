@@ -105,7 +105,7 @@
     <script>
         const form = document.querySelector(".form_reserva");
         form.addEventListener("submit", function(e) {
-            //e.preventDefault();
+            e.preventDefault();
 
             const formData = new FormData(form);
             const data = Object.fromEntries(formData);
