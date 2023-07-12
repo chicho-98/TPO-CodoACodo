@@ -31,39 +31,38 @@
     </header>
     
     <article class="article art_form_reserva centrado">
-        <h3 class="centrado_horizonal">Reserve sú entrada</h3>
-        <form class="form_reserva" method="post" onsubmit="return sendSubmit()" name="form_reserva">
+        <h3 class="centrado_horizonal">Reserve su entrada</h3>
+        <form class="form_reserva" name="form_reserva">
             <fieldset>
                 <legend>cine</legend>
-                <input class="radio_sel_cine" type="radio" name="radio_cine" value="crespo" checked><label for="crespo">Villa Crespo</label><br>
-                <input class="radio_sel_cine" type="radio" name="radio_cine" value="once"><label for="once">Once (Balvanera)</label><br>
-                <input class="radio_sel_cine" type="radio" name="radio_cine" value="barrio_norte"><label for="barrio_norte">Barrio Norte</label>
+                <input class="radio_sel_cine" type="radio" name="cine" value="Villa Crespo" checked><label for="crespo">Villa Crespo</label><br>
+                <input class="radio_sel_cine" type="radio" name="cine" value="Once"><label for="once">Once (Balvanera)</label><br>
+                <input class="radio_sel_cine" type="radio" name="cine" value="Barrio Norte"><label for="barrio_norte">Barrio Norte</label>
             </fieldset>
             <fieldset  class="fieldset_pelicula">
                 <legend>película</legend>
                 <h5>Película:</h5>
-                <select id="nombre_pelicula" class="list_pelicula">
-                    <option value="volver2">Volver al Futuro 2</option>
-                    <option value="exor">El exorsista del papa</option>
-                    <option value="fast">Fast X</option>
-                    <option value="guard3">Guardianes de la galaxia 3</option>
-                    <option value="wick4">John Wick 4</option>
-                    <option value="extor">La extorsión</option>
-                    <option value="cab">Caballeros de Zodiaco</option>
-                    <option value="sbros">Super Mario Bros</option>
-                </select>            
+                <select name="pelicula" id="nombre_pelicula" class="list_pelicula">
+                    <option value="Batman: el caballero de la noche">Batman: el caballero de la noche</option>
+                    <option value="El Exorcista del Papa">El Exorcista del Papa</option>
+                    <option value="Fast X">Fast X</option>
+                    <option value="Guardianes de la Galaxia Vol. 3">Guardianes de la Galaxia Vol. 3</option>
+                    <option value="It">It</option>
+                    <option value="John Wick 4">John Wick 4</option>
+                    <option value="La Extorsion">La Extorsión</option>
+                    <option value="Los Caballeros del Zodiaco">Los Caballeros del Zodíaco</option>
+                    <option value="El Hombre Araña">El Hombre Araña</option>
+                    <option value="Super Mario Bros.">Super Mario Bros.</option>
+                    <option value="Casablanca">Casablanca</option>
+                    <option value="La Naranja Mecánica">La Naranja Mecánica</option>
+                    <option value="El Padrino">El Padrino</option>
+                    <option value="Star Wars Episodio V - El Imperio contraataca">Star Wars Episodio V - El Imperio contraataca</option>
+                    <option value="Volver al Futuro">Volver al Futuro</option>
+                </select>           
                 <h5>Dia:</h5>
-                <select id="dia_pelicula">
-                    <option value="lunes">Lunes</option>
-                    <option value="martes">Martes</option>
-                    <option value="miercoles">Miercoles</option>
-                    <option value="jueves">Jueves</option>
-                    <option value="viernes">Viernes</option>
-                    <option value="sabado">Sábado</option>
-                    <option value="domingo">Domingo</option>
-                </select>            
+                <input name="fecha" type="date" id="dia_pelicula">
                 <h5 class="hora_pelicula">Hora:</h5>
-                <select id="hora_sel_pelicula">
+                <select name="hora" type="number" id="hora_sel_pelicula">
                     <option value="10">10:00hs</option>
                     <option value="15">15:00hs</option>
                     <option value="18">18:00hs</option>
@@ -71,21 +70,21 @@
                     <option value="23">23:00hs</option>
                 </select>            
                 <h5>Entradas:</h5>
-                <input type="number" id="cantidad_entradas" value="1" min="1" max="10" onchange="changeCantEntradas()">
+                <input name="entradas" type="number" id="cantidad_entradas" value="1" min="1" max="10" onchange="changeCantEntradas()">
                 <label class="total_pelicula" id="total_pelicula">Total: $1500</label>
             </fieldset>    
             <fieldset class="fieldset_factura">
-                <legend>datos de facturación</legend>
-                <h5>Número de tarjeta:</h5>
+                <legend>datos personales</legend>
+                <!-- <h5>Número de tarjeta:</h5>
                 <h5>Vencimiento (mm/aa)</h5>
                 <h5>CVC</h5>
                 <input id="numero_tarjeta_credito" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required="true">
                 <input id="vto_tarjeta_credito" type="tel" inputmode="numeric" pattern="[0-9/\s]{5}" autocomplete="cc-number" maxlength="5" placeholder="xx/xx" required="true">
-                <input id="cvc_tarjeta_credito" type="tel" inputmode="numeric" pattern="[0-9\s]{3}" autocomplete="cc-number" maxlength="3" placeholder="xxx" required="true">
-                <h5 class="ocupar_todo_el_ancho">Ingrese su nombre como figura en la tarjeta:</h5>
+                <input id="cvc_tarjeta_credito" type="tel" inputmode="numeric" pattern="[0-9\s]{3}" autocomplete="cc-number" maxlength="3" placeholder="xxx" required="true"> -->
+                <h5 class="ocupar_todo_el_ancho">Ingrese su nombre:</h5>
                 <input class="ocupar_todo_el_ancho" type="text" name="nombre" pattern="[A-Za-z\s]+" value="" required="true">
                 <h5 class="ocupar_todo_el_ancho">Ingrese su email:</h5>
-                <input class="ocupar_dos_columnas" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="" required="true">
+                <input class="ocupar_todo_el_ancho" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="" required="true">
             </fieldset>  
             <div class="centrado_horizonal"><input type="submit" value=" Reservar "></div>  
         </form>        
@@ -100,5 +99,32 @@
         </ul>
         <h4>CopyRight©2023 para codo a codo</h4>
     </footer>
+    <script>
+        actualDate();
+    </script>
+    <script>
+        const form = document.querySelector(".form_reserva");
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            //console.log(data);
+            fetch('https://agustinrodriguez.pythonanywhere.com/reservas', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data)
+            })
+            .then((response) => {
+                if (response.status === 200) {
+                    alert("Su reserva fue procesada. Gracias! vuelva pronto.");
+                }
+            })
+            .catch(error => console.log(error));
+        });
+    </script>
 </body>
 </html>
