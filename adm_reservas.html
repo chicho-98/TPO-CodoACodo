@@ -58,6 +58,7 @@
                 <th scope="col" class="titulos">Fecha</th>
                 <th scope="col" class="titulos">Hora</th>
                 <th scope="col" class="titulos">Pelicula</th>
+                <th scope="col" class="titulos"></th>
                 <th scope="col" class="titulos">Acciones</th>
             </tr>
         </thead>
@@ -71,6 +72,9 @@
             <td class="rows_table">{{reserva.fecha}}</td>
             <td class="rows_table">{{reserva.hora}}</td>
             <td class="rows_table">{{reserva.pelicula}}</td>
+            <td>
+                <img width="60" :src="'img/peliculas/' + reserva.pelicula + '.jpg'" :alt="reserva.pelicula">
+            </td>
             <td class="rows_table">
         <a class="btn btn-primary" :href="'./edit_reserva.html?id='+ reserva.id" >Editar</a>
         <button type="button" class="btn btn-danger" v-on:click="eliminar(reserva.id)" >Eliminar</button>
