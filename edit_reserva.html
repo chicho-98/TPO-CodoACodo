@@ -42,8 +42,36 @@
                 <input type="number" name="id" id="id" disabled v-model="id" >
             </div>
             <div class="mb-3">
+                <label for="pelicula">pelicula</label>
+                <select name="pelicula" id="pelicula" v-model="pelicula">
+                    <option value="Batman: el caballero de la noche">Batman: el caballero de la noche</option>
+                    <option value="El Exorcista del Papa">El Exorcista del Papa</option>
+                    <option value="Fast X">Fast X</option>
+                    <option value="Guardianes de la Galaxia Vol. 3">Guardianes de la Galaxia Vol. 3</option>
+                    <option value="It">It</option>
+                    <option value="John Wick 4">John Wick 4</option>
+                    <option value="La Extorsion">La Extorsión</option>
+                    <option value="Los Caballeros del Zodiaco">Los Caballeros del Zodíaco</option>
+                    <option value="Spiderman">El Hombre Araña</option>
+                    <option value="Super Mario Bros.">Super Mario Bros.</option>
+                    <option value="Casablanca">Casablanca</option>
+                    <option value="La Naranja Mecanica">La Naranja Mecánica</option>
+                    <option value="El Padrino">El Padrino</option>
+                    <option value="Star Wars Episodio V - El Imperio contraataca">Star Wars Episodio V - El Imperio contraataca</option>
+                    <option value="Volver al Futuro">Volver al Futuro</option>
+                </select>
+            </div>
+            <div class="mb-3">
                 <label for="cine">Cine</label>
-                <input type="text" name="cine" id="cine" v-model="cine">
+                <select name="cine" id="cine" v-model="cine">
+                    <option value="Villa Crespo">Villa Crespo</option>
+                    <option value="Once">Once</option>
+                    <option value="Barrio Norte">Barrio Norte</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" v-model="nombre">
             </div>
             <div class="mb-3">
                 <label for="email">Email</label>
@@ -51,7 +79,7 @@
             </div>
             <div class="mb-3">
                 <label for="entradas">Cant. entradas</label>
-                <input type="number" name="entradas" id="entradas" v-model="entradas">
+                <input type="number" name="entradas" id="entradas" min="1" max="10" v-model="entradas">
             </div>
             <div class="mb-3">
                 <label for="fecha">Fecha</label>
@@ -59,15 +87,13 @@
             </div>
             <div class="mb-3">
                 <label for="hora">Hora</label>
-                <input type="number" name="hora" id="hora" v-model="hora">
-            </div>
-            <div class="mb-3">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" v-model="nombre">
-            </div>
-            <div class="mb-3">
-                <label for="pelicula">pelicula</label>
-                <input type="text" name="pelicula" id="pelicula" v-model="pelicula">
+                <select name="hora" type="number" id="hora" v-model="hora">
+                    <option value="10">10:00hs</option>
+                    <option value="15">15:00hs</option>
+                    <option value="18">18:00hs</option>
+                    <option value="20">20:00hs</option>
+                    <option value="23">23:00hs</option>
+                </select>
             </div>
             <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
             </form>

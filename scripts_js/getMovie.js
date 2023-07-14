@@ -18,8 +18,8 @@ function getMovie(id) {
 
         translateText(data.Title, "en", "es", (error, translatedText) => {
             if (error) {
-              let descriptions = document.getElementsByClassName('movie-description');
-              descriptions[0].textContent = `${data.Plot}`;
+              let movieNames = document.getElementsByClassName('movie-name');
+              movieNames[0].textContent = `${data.Title}`;
             } else {
                let movieNames = document.getElementsByClassName('movie-name');
                movieNames[0].textContent = `${translatedText}`;

@@ -52,11 +52,11 @@
             <tr>
                 <th scope="col" class="titulos">Id</th>
                 <th scope="col" class="titulos">Cine</th>
+                <th scope="col" class="titulos">Nombre</th>
                 <th scope="col" class="titulos">Email</th>
                 <th scope="col" class="titulos">Entradas</th>
                 <th scope="col" class="titulos">Fecha</th>
                 <th scope="col" class="titulos">Hora</th>
-                <th scope="col" class="titulos">Nombre</th>
                 <th scope="col" class="titulos">Pelicula</th>
                 <th scope="col" class="titulos">Acciones</th>
             </tr>
@@ -65,11 +65,11 @@
         <tr class="" v-for="reserva in reservas">
             <td scope="row" class="rows_table">{{reserva.id}}</td>
             <td class="rows_table">{{reserva.cine}}</td>
+            <td class="rows_table">{{reserva.nombre}}</td>
             <td class="rows_table">{{reserva.email}}</td>
             <td class="rows_table">{{reserva.entradas}}</td>
             <td class="rows_table">{{reserva.fecha}}</td>
             <td class="rows_table">{{reserva.hora}}</td>
-            <td class="rows_table">{{reserva.nombre}}</td>
             <td class="rows_table">{{reserva.pelicula}}</td>
             <td class="rows_table">
         <a class="btn btn-primary" :href="'./edit_reserva.html?id='+ reserva.id" >Editar</a>
